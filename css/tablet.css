@@ -1,0 +1,63 @@
+/* ----- HEADER ----- */
+.header-container {
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav ul {
+  justify-content: center;
+}
+
+.main-nav li a {
+  padding: 15px;
+}
+
+/* ----- LAYOUT -----  */
+.grid-layout {
+  display: grid;
+  grid-template:
+    " showcase "
+    " planet-info "
+    " planet-data " ;
+}
+
+#showcase img {
+  width: calc(63%);
+  margin: 40px 0px 60px 0px;
+}
+
+#showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planet-info {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.planet-info-display {
+  flex-basis: 50%;
+  margin-right: 20px;
+}
+
+.planet-data {
+  padding-top: 0;
+}
+
+.planet-data > * {
+  margin: 10px;
+}

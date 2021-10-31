@@ -1,0 +1,212 @@
+header {
+  margin-bottom: 0;
+}
+
+.planet-info nav {
+  display: none;
+}
+
+.logo {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* NAVIGATION */
+/* Show mobile and hide desktop */
+.main-nav { display: none; }
+.hamburger { display: block; }
+.mobile-nav { display: none; }
+.mobile-nav.show { display: block; }
+.mobile-nav { 
+  flex-basis: 100%;
+  padding-top: 40px;
+  background-color: var(--blue-dark);
+  min-height: 80vh;
+}
+
+.mobile-nav:before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(151, 151, 151, 0.1);
+}
+
+.mobile-nav ul li {
+  border-bottom: 1px solid rgba(151, 151, 151, 0.1);
+}
+
+.mobile-nav ul li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav ul li a {
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+}
+
+.mobile-nav ul li a i {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* ----- HAMBURGER BUTTON ----- */
+.hamburger {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger-wrapper {
+  height: 17px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hamburger-wrapper > div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.hamburger-wrapper > div::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hamburger-wrapper > div::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger.fade .hamburger-wrapper > div,
+.hamburger.fade .hamburger-wrapper > div::after,
+.hamburger.fade .hamburger-wrapper > div::before{
+  background-color: #979797;
+}
+
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+  align-self: flex-start;
+}
+
+.mobile-planet-info-navigation {
+  border-bottom: 2px solid rgba(151, 151, 151, 0.2);
+  display: flex;
+}
+
+.mobile-planet-info-navigation li {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-planet-info-navigation a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  padding: 15px 0;
+  color:rgba(151, 151, 151, 0.5);
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-planet-info-navigation > * {
+  flex-basis: calc(100% / 3);
+}
+
+.planet-info-display {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+#showcase img {
+  width: calc(40%);
+  margin: 40px 0px 60px 0px;
+}
+
+#showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planet-data {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.planet-data > * {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.data-display-card h2 {
+  margin: 0;
+}
+
+.data-display-card {
+  padding: 20px;
+}
+
+.mobile-planet-info-nav-active {
+  position: relative;
+}
+
+.mobile-planet-info-nav-active::after {
+  content: "";
+  width: 50%;
+  height: 4px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-planet-info-nav-active.mercury::after { background-color: var(--blue-lighter); }
+.mobile-planet-info-nav-active.venus::after { background-color: var(--yellow); }
+.mobile-planet-info-nav-active.earth::after { background-color: var(--purple); }
+.mobile-planet-info-nav-active.mars::after { background-color: var(--red-light); }
+.mobile-planet-info-nav-active.jupiter::after { background-color: var(--red); }
+.mobile-planet-info-nav-active.saturn::after { background-color: var(--orange); }
+.mobile-planet-info-nav-active.uranus::after { background-color: var(--cyan); }
+.mobile-planet-info-nav-active.neptune::after { background-color: var(--blue-light); }

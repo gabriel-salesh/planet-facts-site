@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 942px)">
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 500px)">
+  <title>Frontend Mentor | Planets fact site</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">the planets</div>
+      <button class="hamburger" id="hamburger">
+        <div class="hamburger-wrapper">
+          <div></div>
+        </div>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#">Mercury</a></li>
+          <li><a href="#">Venus</a></li>
+          <li><a href="#">Earth</a></li>
+          <li><a href="#">Mars</a></li>
+          <li><a href="#">Jupiter</a></li>
+          <li><a href="#">Saturn</a></li>
+          <li><a href="#">Uranus</a></li>
+          <li><a href="#">Neptune</a></li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav" id="mobile-nav">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--blue-lighter)"></span>
+              Mercury
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--yellow)"></span>
+              Venus
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--purple)"></span>
+              Earth
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--red-light);"></span>
+              Mars
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--red);"></span>
+              Jupiter
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--orange);"></span>
+              Saturn
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--cyan);"></span>
+              Uranus
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="circle" style="background-color: var(--blue-light);"></span>
+              Neptune
+              <i><img src="/assets/icon-chevron.svg" alt=""></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      (function() {
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobile-nav")
+        hamburger.addEventListener("click", function(e) {
+          e.preventDefault;
+          mobileNav.classList.toggle("show");
+          hamburger.classList.toggle("fade");
+        });
+      })()
+    </script>
+  </header>
+  <main>
+    <nav>
+      <ul class="mobile-planet-info-navigation">
+        <li><a href="#" class="mobile-planet-info-nav-active mercury">Overview</a></li>
+        <li><a href="#">Structure</a></li>
+        <li><a href="#">Surface</a></li>
+      </ul>
+    </nav>
+    <div class="grid-layout main-container">
+      <figure id="showcase">
+        <img src="/assets/planet-mercury.svg" alt="planet-mercury">
+      </figure>
+      <aside class="planet-info">
+        <div class="planet-info-display">
+          <h1 id="planet-name">Mercury</h1>
+          <p id="info-display">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
+          <div class="source-link">Source : <a id="source-link" href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">Wikipedia</a> <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank"><img src="/assets/icon-source.svg" alt=">" class="source-link-icon"></a></div>
+        </div>
+        <nav>
+          <ul class="planet-info-navigation">
+            <li><a href="#" class="nav-btn btn-active mercury"><span>01</span> Overview</a></li>
+            <li><a href="#" class="nav-btn"><span>02</span> Internal structure</a></li>
+            <li><a href="#" class="nav-btn"><span>03</span> Surface geology</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="planet-data">
+        <div class="data-display-card">
+          <h2>Rotation time</h2>
+          <p class="data-display"><span id="rotation">58.6 Days</span></p>
+        </div>
+        <div class="data-display-card">
+          <h2>Revolution time</h2>
+          <p class="data-display"><span id="revolution">87.97 Days</span></p>
+        </div>
+        <div class="data-display-card">
+          <h2>Radius</h2>
+          <p class="data-display"><span id="radius">2,439.7 KM</span></p>
+        </div>
+        <div class="data-display-card">
+          <h2>Average temp.</h2>
+          <p class="data-display"><span id="temperature">430°c</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/display-data.js"></script>
+</body>
+</html>
