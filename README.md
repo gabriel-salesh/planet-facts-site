@@ -31,9 +31,6 @@ This is a solution to the [Planets fact site challenge on Frontend Mentor](https
 - Flexbox
 - CSS Grid
 
-### Continued development
-I will come back to this project to organize the JavaScript better.
-
 ## Author
 - Frontend Mentor - [@gabriel-salesh](https://www.frontendmentor.io/profile/gabriel-salesh)
 
